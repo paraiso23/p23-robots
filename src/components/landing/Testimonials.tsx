@@ -1,6 +1,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -25,29 +26,65 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-20 sm:py-28 container mx-auto px-4">
-      <div className="text-center max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold">Confiado por PyMEs y Freelancers</h2>
-        <p className="mt-4 text-lg text-muted-foreground">Descubre cómo nuestros agentes de IA están transformando pequeños negocios y profesionales independientes.</p>
-      </div>
-      <div className="grid md:grid-cols-3 gap-8 mt-12 max-w-6xl mx-auto">
-        {testimonials.map((testimonial, index) => (
-          <Card key={index} className="bg-white/5 border-white/10 backdrop-blur-lg h-full flex flex-col">
-            <CardContent className="pt-6 flex-grow flex flex-col">
-              <p className="text-muted-foreground flex-grow">"{testimonial.quote}"</p>
-              <div className="flex items-center mt-6">
-                <Avatar>
-                  <AvatarImage src={`https://api.dicebear.com/7.x/initials/svg?seed=${testimonial.name}`} />
-                  <AvatarFallback>{testimonial.initials}</AvatarFallback>
-                </Avatar>
-                <div className="ml-4">
-                  <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+    <section id="testimonials" className="section-padding relative">
+      <div className="container mx-auto px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center max-w-4xl mx-auto mb-20">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
+            <span className="text-gradient">Confiado por PyMEs</span>
+            <br />
+            <span className="text-gradient-blue">y Freelancers</span>
+          </h2>
+          <p className="text-xl text-white/70 leading-relaxed">
+            Descubre cómo nuestros agentes de IA están transformando pequeños negocios y profesionales independientes.
+          </p>
+        </div>
+
+        {/* Testimonials Grid */}
+        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {testimonials.map((testimonial, index) => (
+            <Card 
+              key={index} 
+              className="glass hover-lift group border-0 relative overflow-hidden"
+            >
+              {/* Gradient Effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <CardContent className="p-8 relative z-10">
+                {/* Quote Icon */}
+                <div className="relative mb-6">
+                  <Quote className="h-8 w-8 text-blue-400 opacity-70" />
                 </div>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
+
+                {/* Quote Text */}
+                <p className="text-white/80 text-lg leading-relaxed mb-8 italic">
+                  "{testimonial.quote}"
+                </p>
+
+                {/* Author */}
+                <div className="flex items-center gap-4">
+                  <div className="relative">
+                    <Avatar className="h-12 w-12 border-2 border-blue-400/30">
+                      <AvatarImage src={`https://api.dicebear.com/7.x/initials/svg?seed=${testimonial.name}&backgroundColor=1e293b&textColor=94a3b8`} />
+                      <AvatarFallback className="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold">
+                        {testimonial.initials}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div className="absolute inset-0 bg-blue-400 rounded-full blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white group-hover:text-gradient-blue transition-all duration-300">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-sm text-white/60">
+                      {testimonial.title}
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );

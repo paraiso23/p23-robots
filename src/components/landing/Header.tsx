@@ -11,50 +11,109 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = ["Features", "Use Cases", "Testimonials", "Contact"];
+  const navLinks = [
+    { name: "Features", href: "#features" },
+    { name: "Use Cases", href: "#use-cases" },
+    { name: "Testimonials", href: "#testimonials" },
+    { name: "Contact", href: "#contact" }
+  ];
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-lg border-b border-white/5' : 'bg-transparent'}`}>
-      <div className="container mx-auto px-4">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled 
+        ? 'glass-strong shadow-lg shadow-black/5' 
+        : 'bg-transparent'
+    }`}>
+      <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center space-x-2">
-            <BrainCircuit className="text-primary h-8 w-8" />
-            <span className="text-2xl font-bold">Paraiso23</span>
+          {/* Logo */}
+          <div className="flex items-center space-x-3 group">
+            <div className="relative">
+              <BrainCircuit className="text-blue-400 h-8 w-8 transition-transform duration-300 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-blue-400 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
+            </div>
+            <span className="text-2xl font-bold text-gradient">Paraiso23</span>
           </div>
-          <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map(link => <a key={link} href={`#${link.toLowerCase().replace(' ', '-')}`} className="text-muted-foreground hover:text-primary transition-colors">{link}</a>)}
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="relative text-white/80 hover:text-white transition-colors duration-300 font-medium group"
+              >
+                {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all duration-300 group-hover:w-full" />
+              </a>
+            ))}
           </nav>
-          <div className="hidden md:flex items-center space-x-4">
-            <Button>Request Demo</Button>
-            <Button variant="outline" size="icon" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+
+          {/* Desktop Actions */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              className="text-white/80 hover:text-white hover:bg-white/10 transition-all duration-300"
+            >
               {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               <span className="sr-only">Toggle theme</span>
             </Button>
-          </div>
-          <div className="md:hidden flex items-center">
-            <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <X /> : <Menu />}
-              <span className="sr-only">Toggle menu</span>
+            <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-0 px-6 font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
+              Request Demo
             </Button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-white/80 hover:text-white hover:bg-white/10"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            <span className="sr-only">Toggle menu</span>
+          </Button>
         </div>
       </div>
+
+      {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-background/90 backdrop-blur-lg pb-4">
-          <nav className="flex flex-col items-center space-y-4">
-            {navLinks.map(link => <a key={link} href={`#${link.toLowerCase().replace(' ', '-')}`} onClick={() => setIsOpen(false)} className="text-lg text-muted-foreground hover:text-primary transition-colors">{link}</a>)}
-            <Button>Request Demo</Button>
-            <Button variant="outline" size="icon" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-              {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-              <span className="sr-only">Toggle theme</span>
-            </Button>
-          </nav>
+        <div className="lg:hidden glass-strong border-t border-white/10">
+          <div className="container mx-auto px-6 py-6">
+            <nav className="flex flex-col space-y-4">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-white/80 hover:text-white transition-colors duration-300 font-medium py-2"
+                >
+                  {link.name}
+                </a>
+              ))}
+              <div className="flex items-center space-x-4 pt-4 border-t border-white/10">
+                <Button 
+                  variant="ghost" 
+                  size="icon" 
+                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                  className="text-white/80 hover:text-white hover:bg-white/10"
+                >
+                  {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                </Button>
+                <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-0 px-6 font-medium flex-1">
+                  Request Demo
+                </Button>
+              </div>
+            </nav>
+          </div>
         </div>
       )}
     </header>
