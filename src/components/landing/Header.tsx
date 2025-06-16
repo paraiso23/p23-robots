@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { BrainCircuit, Sun, Moon, Menu, X } from 'lucide-react';
+import { Sun, Moon, Menu, X } from 'lucide-react';
 import { useTheme } from '@/hooks/use-theme';
 
 const Header = () => {
@@ -34,10 +34,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3 group">
-            <div className="relative">
-              <BrainCircuit className="text-blue-400 h-8 w-8 transition-transform duration-300 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-blue-400 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
-            </div>
+            <img
+              src="/logo.png"
+              alt="Paraiso23 logo"
+              className="h-8 w-8 rounded transition-transform duration-300 group-hover:scale-110"
+            />
             <span className="text-2xl font-bold text-gradient">Paraiso23</span>
           </div>
 
