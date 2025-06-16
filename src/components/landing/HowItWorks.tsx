@@ -3,17 +3,17 @@ const steps = [
   {
     step: "1",
     title: "Conectamos tu conocimiento",
-    description: "Extraeremos todo el conocimiento de tu empresa. Desde lo que está en tu cabeza, mediante audios y texto, hasta las publicación de tus RRSS, pasando por tus documentos importantes."
+    description: "Recopilamos todo lo que sabes sobre tu negocio: desde conversaciones y documentos hasta tus publicaciones en redes sociales."
   },
   {
     step: "2",
     title: "Configuramos tus Agentes",
-    description: "Personalizaremos los agentes según tus necesidades: atención al cliente, marketing, ventas o análisis de datos."
+    description: "Los adaptamos a lo que necesitas: atender clientes, hacer marketing, vender o analizar datos."
   },
   {
     step: "3",
-    title: "Escalamos los bots",
-    description: "Despliega en tu negocio y escala según crezcas. Los agentes trabajan 24/7 mientras tú te enfocas en lo importante."
+    title: "Los ponemos a trabajar",
+    description: "Los integramos en tu negocio y crecen contigo. Trabajan 24/7 mientras tú te ocupas de lo estratégico."
   }
 ];
 
@@ -29,7 +29,7 @@ const HowItWorks = () => {
             <span className="text-gradient-blue">los Agentes de IA?</span>
           </h2>
           <p className="text-xl text-white/70 leading-relaxed">
-            Son los refuerzos que tu empresa necesita para que la experiencia del cliente sea más fluida.
+            Son el apoyo que tu empresa necesita para que tus clientes tengan una mejor experiencia contigo.
           </p>
         </div>
 

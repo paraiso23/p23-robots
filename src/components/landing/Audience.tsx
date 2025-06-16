@@ -6,17 +6,17 @@ const audiences = [
   {
     icon: Users,
     title: "Agentes de IA para Usuarios",
-    description: "Automatiza la creación de contenidos, respuestas rápidas y optimización de textos para campañas de marketing y atención al cliente."
+    description: "Te ayudan a crear contenido, responder mensajes rápido y mejorar tus textos para marketing y atención al cliente."
   },
   {
     icon: Shield,
     title: "Agentes de IA para Directivos",
-    description: "Analiza datos operativos, supervisa métricas y sugiere acciones para optimizar la eficiencia y resultados de tu negocio."
+    description: "Revisan tus números, vigilan las métricas importantes y te sugieren qué hacer para mejorar tu negocio."
   },
   {
     icon: Bot,
     title: "Agentes de IA para Consumidores",
-    description: "Chatbots inteligentes que se comunican directamente con tus clientes finales de forma autónoma y eficiente las 24/7."
+    description: "Chatbots que hablan con tus clientes de forma natural y resuelven sus dudas las 24 horas, todos los días."
   }
 ];
 
@@ -27,12 +27,12 @@ const Audience = () => {
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-20">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
-            <span className="text-gradient">Los Agentes de IA potencian a todos</span>
+            <span className="text-gradient">Los Agentes de IA trabajan</span>
             <br />
-            <span className="text-gradient-blue">los públicos de tu empresa</span>
+            <span className="text-gradient-blue">para toda tu empresa</span>
           </h2>
           <p className="text-xl text-white/70 leading-relaxed">
-            En Paraiso23, una solución integral de IA, los agentes hacen el trabajo operativo mientras tú te centras en lo estratégico.
+            En Paraiso23 creamos una solución de IA práctica donde los agentes se encargan de las tareas del día a día mientras tú te dedicas a hacer crecer tu negocio.
           </p>
         </div>
 
