@@ -4,33 +4,33 @@ import { Rocket, ShoppingCart, Heart, Users, BarChart, Zap } from 'lucide-react'
 const useCases = [
   { 
     icon: Rocket, 
-    title: "Para atraer clientes potenciales", 
-    description: "Deja que el agente cree contenido de activación, segmente tus clientes potenciales y analice los resultados de la campaña." 
+    title: "Para conseguir nuevos clientes",
+    description: "El agente crea contenido que llama la atención, identifica clientes potenciales y te dice cómo van tus campañas."
   },
   { 
     icon: ShoppingCart, 
-    title: "Convertir y vender más", 
-    description: "Utiliza el agente para crear chatbots en minutos, priorizar mensajes, optimizar anuncios y hacer seguimiento de clientes." 
+    title: "Para vender más",
+    description: "Crea chatbots en minutos, ordena tus mensajes por prioridad, mejora tus anuncios y hace seguimiento a clientes."
   },
   { 
     icon: Heart, 
-    title: "Para atender mejor a tus clientes", 
-    description: "Haz que el agente trabaje en respuestas rápidas y precisas, además de analizar el servicio según el sentimiento del cliente." 
+    title: "Para atender mejor",
+    description: "Responde rápido y bien a tus clientes, además de analizar si están contentos con tu servicio."
   },
   { 
     icon: Users, 
-    title: "Para captar y retener tu base", 
-    description: "Configura al agente para controlar constantemente tu base de clientes y actuar para fomentar la recompra y recaptar inactivos." 
+    title: "Para cuidar tu base de clientes",
+    description: "Vigila constantemente a tus clientes y actúa para que vuelvan a comprar o recuperar a los que se fueron."
   },
   { 
     icon: BarChart, 
-    title: "Análisis inteligente de datos", 
-    description: "Procesan grandes volúmenes de datos para detectar patrones, anticiparse a problemas y apoyar decisiones estratégicas." 
+    title: "Análisis inteligente de datos",
+    description: "Revisan mucha información para encontrar patrones, anticipar problemas y ayudarte a tomar mejores decisiones."
   },
   { 
     icon: Zap, 
-    title: "Aumento de la productividad", 
-    description: "Al hacerse cargo de actividades operativas, liberan a los empleados para centrarse en retos más estratégicos y creativos." 
+    title: "Más tiempo para lo importante",
+    description: "Al encargarse de lo rutinario, tú puedes dedicarte a planificar y hacer crecer tu negocio."
   },
 ];
 
@@ -44,10 +44,10 @@ const UseCases = () => {
             <span className="text-gradient">Use Cases</span>
           </h2>
           <p className="text-xl text-white/70 leading-relaxed mb-4">
-            Los Agentes de IA trabajan en todo el recorrido del cliente
+            Los Agentes de IA acompañan a tus clientes en todo el proceso
           </p>
           <p className="text-lg text-white/60 leading-relaxed">
-            Desde la automatización de tareas y creación de chatbots hasta la generación de insights para fidelizar clientes.
+            Desde automatizar tareas y crear chatbots hasta generar información útil para mantener contentos a tus clientes.
           </p>
         </div>
 

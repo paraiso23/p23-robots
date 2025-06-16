@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight, Sparkles } from "lucide-react";
 
 const benefits = [
-  "Atrae más clientes con campañas multicanal inteligentes",
+  "Consigue más clientes con campañas inteligentes en varios canales",
   "Vende hasta 2 veces más con atención centralizada",
   "Atiende mejor con servicio posventa automatizado",
-  "Nutre tu base con análisis de datos y activadores inteligentes"
+  "Cuida tu base de clientes con análisis de datos y recordatorios inteligentes"
 ];
 
 const Cta = () => {
@@ -37,7 +37,7 @@ const Cta = () => {
               </h2>
               
               <p className="text-xl text-white/80 mb-12 leading-relaxed">
-                Activar tus IAs y a funcionar: facilitas la comunicación con tus clientes en todas las etapas, sin florituras ni complicaciones.
+                Activa tus IAs y a funcionar: mejora la comunicación con tus clientes en todas las etapas, de forma sencilla y sin complicaciones.
               </p>
 
               {/* Benefits List */}
@@ -55,7 +55,7 @@ const Cta = () => {
               </div>
 
               <p className="text-lg text-white/70 mb-8 leading-relaxed">
-                Contáctanos para una demostración personalizada y descubre cómo los Agentes de IA pueden transformar tu negocio.
+                Contáctanos para una demostración personalizada y descubre cómo los Agentes de IA pueden ayudar a tu negocio.
               </p>
 
               {/* CTA Button */}

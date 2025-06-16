@@ -33,7 +33,7 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-12 leading-relaxed animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            Automatiza, personaliza y optimiza tu empresa usando empleados virtuales que trabajan las 24 horas del día.
+            Automatiza tareas, mejora la atención al cliente y haz crecer tu negocio con asistentes virtuales que nunca descansan.
           </p>
 
           {/* CTA Button */}

@@ -5,32 +5,32 @@ const features = [
   { 
     icon: Clock, 
     title: "Funcionamiento 24/7",
-    description: "Trabajan sin pausa, garantizando disponibilidad completa para ofrecer asistencia continua y respuestas rápidas."
+    description: "Siempre disponibles para atender a tus clientes, sin importar la hora o el día."
   },
   { 
     icon: Target, 
-    title: "Precisión en las Decisiones",
-    description: "Eliminan el error humano en tareas repetitivas, ofreciendo información más precisa para decisiones eficientes."
+    title: "Menos errores, mejores resultados",
+    description: "Se encargan de las tareas repetitivas sin equivocarse, dándote información más confiable."
   },
   { 
     icon: Zap, 
     title: "Automatización de Tareas",
-    description: "Realizan tareas repetitivas automáticamente para una experiencia más rápida, eliminando fricciones en los procesos."
+    description: "Hacen automáticamente lo que antes tenías que hacer a mano, ahorrándote tiempo valioso."
   },
   { 
     icon: DollarSign, 
     title: "Reducción de Costos",
-    description: "Automatizan procesos y optimizan operaciones, ayudando a reducir gastos y minimizar errores costosos."
+    description: "Te ayudan a gastar menos automatizando procesos y evitando errores que cuestan dinero."
   },
   { 
     icon: BrainCircuit, 
     title: "Personalización Inteligente",
-    description: "Analizan historiales y preferencias para crear campañas altamente segmentadas y experiencias personalizadas."
+    description: "Conocen a tus clientes y crean mensajes y ofertas pensadas especialmente para cada uno."
   },
   { 
     icon: CheckCircle, 
-    title: "Aumento de la productividad",
-    description: "Al hacerse cargo de actividades operativas, liberan a los empleados para centrarse en retos más estratégicos y creativos."
+    title: "Más tiempo para lo importante",
+    description: "Al encargarse de lo rutinario, tú puedes dedicarte a planificar y hacer crecer tu negocio."
   }
 ];
 
@@ -44,7 +44,7 @@ const KeyFeatures = () => {
             <span className="text-gradient">Key Features</span>
           </h2>
           <p className="text-xl text-white/70 leading-relaxed">
-            Los Agentes de IA potencian a todos los públicos de tu empresa. En Paraiso23, una solución integral de IA, los agentes hacen el trabajo operativo mientras tú te centras en lo estratégico.
+            Los Agentes de IA trabajan para toda tu empresa. En Paraiso23 creamos una solución práctica donde los agentes manejan lo operativo mientras tú te enfocas en lo importante.
           </p>
         </div>
 

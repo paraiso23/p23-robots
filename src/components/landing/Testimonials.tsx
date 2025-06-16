@@ -5,19 +5,19 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Los agentes de IA de Paraiso23 han transformado completamente nuestra atención al cliente. Ahora podemos responder 24/7 y nuestros clientes están mucho más satisfechos.",
+    quote: "Los agentes de IA de Paraiso23 han cambiado completamente nuestra atención al cliente. Ahora podemos atender las 24 horas y nuestros clientes están mucho más contentos.",
     name: "María González",
     initials: "MG",
     title: "Fundadora, Boutique Online"
   },
   {
-    quote: "Como freelancer, necesitaba automatizar muchas tareas repetitivas. Los agentes de IA me han permitido enfocarme en lo creativo mientras ellos manejan la comunicación con clientes.",
+    quote: "Como freelancer, tenía muchas tareas repetitivas que me quitaban tiempo. Los agentes de IA me permiten concentrarme en lo creativo mientras ellos se encargan de hablar con los clientes.",
     name: "Carlos Ruiz",
     initials: "CR",
     title: "Consultor Digital Independiente"
   },
   {
-    quote: "Hemos visto un aumento del 40% en nuestras ventas desde que implementamos los chatbots inteligentes. La personalización automática es increíble.",
+    quote: "Hemos vendido 40% más desde que pusimos los chatbots inteligentes. Me sorprende cómo personalizan automáticamente cada conversación.",
     name: "Ana Martínez",
     initials: "AM",
     title: "Gerente, Tienda de Deportes"
@@ -36,7 +36,7 @@ const Testimonials = () => {
             <span className="text-gradient-blue">y Freelancers</span>
           </h2>
           <p className="text-xl text-white/70 leading-relaxed">
-            Descubre cómo nuestros agentes de IA están transformando pequeños negocios y profesionales independientes.
+            Descubre cómo nuestros agentes de IA están ayudando a pequeños negocios y profesionales independientes.
           </p>
         </div>
 
