@@ -34,12 +34,13 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3 group">
-            <img
-              src="/logo.png"
-              alt="Paraiso23 logo"
-              className="h-8 w-8 rounded transition-transform duration-300 group-hover:scale-110"
-            />
-            <span className="text-2xl font-bold text-gradient">Paraiso23</span>
+            <div className="relative h-8 w-8">
+              <img
+                src="/logo.png"
+                alt="Paraiso23 logo"
+                className="h-full w-full rounded transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
           </div>
 
           {/* Desktop Navigation */}
