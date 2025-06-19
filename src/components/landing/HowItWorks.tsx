@@ -1,35 +1,33 @@
 
 const steps = [
   {
-    step: "1",
-    title: "Conectamos tu conocimiento",
-    description: "Recopilamos todo lo que sabes sobre tu negocio: desde conversaciones y documentos hasta tus publicaciones en redes sociales."
+    step: '1',
+    title: 'Nos cuentas cómo trabajas',
+    description: 'Revisamos tus procesos y detectamos las tareas repetitivas.'
   },
   {
-    step: "2",
-    title: "Configuramos tus Agentes",
-    description: "Los adaptamos a lo que necesitas: atender clientes, hacer marketing, vender o analizar datos."
+    step: '2',
+    title: 'Creamos un agente IA adaptado a ti',
+    description: 'Lo configuramos para que haga justo lo que necesitas.'
   },
   {
-    step: "3",
-    title: "Los ponemos a trabajar",
-    description: "Los integramos en tu negocio y crecen contigo. Trabajan 24/7 mientras tú te ocupas de lo estratégico."
+    step: '3',
+    title: 'Lo conectamos a tus herramientas',
+    description: 'Gmail, WhatsApp, Drive… todo queda integrado.'
   }
 ];
 
 const HowItWorks = () => {
   return (
-    <section className="section-padding relative">
+    <section id="como" className="section-padding relative">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-20">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
-            <span className="text-gradient">¿Por qué están en auge</span>
-            <br />
-            <span className="text-gradient-blue">los Agentes de IA?</span>
+            <span className="text-gradient">Cómo funciona</span>
           </h2>
           <p className="text-xl text-white/70 leading-relaxed">
-            Son el apoyo que tu empresa necesita para que tus clientes tengan una mejor experiencia contigo.
+            En 3 pasos:
           </p>
         </div>
 
@@ -64,6 +62,14 @@ const HowItWorks = () => {
             </div>
           ))}
         </div>
+
+        <p className="text-center text-white/70 text-lg mt-12">
+          Todo desde una interfaz visual y sin escribir una línea de código.
+        </p>
+        <p className="text-center text-white/60 text-base mt-4">
+          Puedes acceder a tu sistema desde un panel visual, añadir agentes
+          nuevos y ver cómo trabaja por ti.
+        </p>
       </div>
     </section>
   );

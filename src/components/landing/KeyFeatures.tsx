@@ -1,58 +1,73 @@
 
-import { Clock, Target, Zap, DollarSign, BrainCircuit, CheckCircle } from 'lucide-react';
+import {
+  Users,
+  Mail,
+  Folder,
+  CalendarDays,
+  BarChart2,
+  FileText,
+  Bot
+} from 'lucide-react';
 
 const features = [
-  { 
-    icon: Clock, 
-    title: "Funcionamiento 24/7",
-    description: "Siempre disponibles para atender a tus clientes, sin importar la hora o el día."
+  {
+    icon: Users,
+    title: 'CRM Reactivo',
+    description: 'Detecta clientes que no responden y les escribe'
   },
-  { 
-    icon: Target, 
-    title: "Menos errores, mejores resultados",
-    description: "Se encargan de las tareas repetitivas sin equivocarse, dándote información más confiable."
+  {
+    icon: Mail,
+    title: 'Email Inteligente',
+    description: 'Redacta respuestas frecuentes por ti'
   },
-  { 
-    icon: Zap, 
-    title: "Automatización de Tareas",
-    description: "Hacen automáticamente lo que antes tenías que hacer a mano, ahorrándote tiempo valioso."
+  {
+    icon: Folder,
+    title: 'Gestor de Propuestas',
+    description: 'Envía seguimientos automáticos'
   },
-  { 
-    icon: DollarSign, 
-    title: "Reducción de Costos",
-    description: "Te ayudan a gastar menos automatizando procesos y evitando errores que cuestan dinero."
+  {
+    icon: CalendarDays,
+    title: 'Content Planner',
+    description: 'Sugiere, redacta y programa publicaciones'
   },
-  { 
-    icon: BrainCircuit, 
-    title: "Personalización Inteligente",
-    description: "Conocen a tus clientes y crean mensajes y ofertas pensadas especialmente para cada uno."
+  {
+    icon: BarChart2,
+    title: 'Facturación Pro',
+    description: 'Controla cobros y manda recordatorios'
   },
-  { 
-    icon: CheckCircle, 
-    title: "Más tiempo para lo importante",
-    description: "Al encargarse de lo rutinario, tú puedes dedicarte a planificar y hacer crecer tu negocio."
+  {
+    icon: FileText,
+    title: 'AutoResumen',
+    description: 'Transcribe reuniones y crea lista de tareas'
+  },
+  {
+    icon: Bot,
+    title: 'Bot de WhatsApp',
+    description: 'Atiende dudas comunes al instante'
   }
 ];
 
 const KeyFeatures = () => {
   return (
-    <section className="section-padding relative">
+    <section id="library" className="section-padding relative">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-20">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
-            <span className="text-gradient">Key Features</span>
+            <span className="text-gradient">Librería de agentes</span>
+            <br />
+            <span className="text-gradient-blue">disponibles</span>
           </h2>
           <p className="text-xl text-white/70 leading-relaxed">
-            Los Agentes de IA trabajan para toda tu empresa. En Paraiso23 creamos una solución práctica donde los agentes manejan lo operativo mientras tú te enfocas en lo importante.
+            Estos son algunos de los módulos más comunes:
           </p>
         </div>
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {features.map((feature, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="glass hover-lift group p-8 rounded-3xl border-0 relative overflow-hidden cursor-pointer"
             >
               {/* Gradient Effect */}
@@ -78,6 +93,10 @@ const KeyFeatures = () => {
             </div>
           ))}
         </div>
+
+        <p className="text-center text-white/70 text-lg mt-12">
+          Cada agente es personalizable y puedes combinarlos como quieras.
+        </p>
       </div>
     </section>
   );
