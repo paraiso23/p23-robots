@@ -17,45 +17,67 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-8 animate-slide-up">
             <Sparkles className="w-4 h-4 text-blue-400" />
-            <span className="text-sm font-medium text-white/90">v1.0.0</span>
+            <span className="text-sm font-medium text-white/90">El impacto</span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            <span className="block text-gradient mb-2">Agentes de IA</span>
-            <span className="block text-gradient-blue">para PyMEs</span>
+          <h1
+            className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 animate-slide-up"
+            style={{ animationDelay: '0.1s' }}
+          >
+            <span className="block text-gradient mb-2">
+              Automatiza lo que no te gusta
+            </span>
+            <span className="block text-gradient-blue">
+              Asistentes IA que crecen contigo
+            </span>
           </h1>
 
           {/* Subheading */}
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white/90 mb-6 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            Transforma tu negocio con Agentes de IA
+          <h2
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white/90 mb-6 animate-slide-up"
+            style={{ animationDelay: '0.2s' }}
+          >
+            Empieza con un agente. Crea tu red. Ahorra tiempo, gana foco y escala
+            sin contratar a nadie más.
           </h2>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-12 leading-relaxed animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            Automatiza tareas, mejora la atención al cliente y haz crecer tu negocio con asistentes virtuales que nunca descansan.
+          <p
+            className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-12 leading-relaxed animate-slide-up"
+            style={{ animationDelay: '0.3s' }}
+          >
+            Automatiza tareas, mejora la atención al cliente y haz crecer tu
+            negocio con asistentes virtuales que nunca descansan.
           </p>
 
           {/* CTA Button */}
           <div className="animate-slide-up" style={{ animationDelay: '0.4s' }}>
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-0 px-8 py-6 text-lg font-semibold rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 group"
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-0 px-8 py-6 text-lg font-semibold rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 group mr-4"
             >
-              Análisis gratuito
+              Crear mi primer asistente
               <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-white/20 text-white ml-4 hover:bg-white/10"
+            >
+              Explorar ejemplos
             </Button>
           </div>
 
           {/* Floating Cards */}
           <div className="absolute top-20 left-10 glass p-4 rounded-xl animate-float hidden lg:block">
-            <div className="text-sm text-white/80">24/7 Available</div>
+            <div className="text-sm text-white/80">Ya lo usan freelancers</div>
           </div>
-          <div className="absolute top-40 right-10 glass p-4 rounded-xl animate-float hidden lg:block" style={{ animationDelay: '1s' }}>
-            <div className="text-sm text-white/80">AI Powered</div>
-          </div>
-          <div className="absolute bottom-40 left-20 glass p-4 rounded-xl animate-float hidden lg:block" style={{ animationDelay: '2s' }}>
-            <div className="text-sm text-white/80">Cost Effective</div>
+          <div
+            className="absolute top-40 right-10 glass p-4 rounded-xl animate-float hidden lg:block"
+            style={{ animationDelay: '1s' }}
+          >
+            <div className="text-sm text-white/80">clínicas y creativos</div>
           </div>
         </div>
       </div>

@@ -1,13 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { CheckCircle, ArrowRight, Sparkles } from "lucide-react";
-
-const benefits = [
-  "Consigue más clientes con campañas inteligentes en varios canales",
-  "Vende hasta 2 veces más con atención centralizada",
-  "Atiende mejor con servicio posventa automatizado",
-  "Cuida tu base de clientes con análisis de datos y recordatorios inteligentes"
-];
+import { ArrowRight, Sparkles } from 'lucide-react';
 
 const Cta = () => {
   return (
@@ -31,41 +24,28 @@ const Cta = () => {
             {/* Content */}
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6">
-                <span className="text-gradient">Solución integral de IA</span>
-                <br />
-                <span className="text-gradient-blue">para PyMEs y Freelancers</span>
+                <span className="text-gradient">
+                  Tu equipo invisible de IA empieza con una conversación
+                </span>
               </h2>
-              
-              <p className="text-xl text-white/80 mb-12 leading-relaxed">
-                Activa tus IAs y a funcionar: mejora la comunicación con tus clientes en todas las etapas, de forma sencilla y sin complicaciones.
+
+              <p className="text-xl text-white/80 mb-8 leading-relaxed">
+                Te ayudamos a detectar qué puedes delegar ya mismo.
               </p>
 
-              {/* Benefits List */}
-              <div className="grid md:grid-cols-2 gap-4 mb-12 text-left max-w-3xl mx-auto">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start gap-3 group">
-                    <div className="w-6 h-6 rounded-full bg-gradient-to-r from-green-400 to-blue-500 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300">
-                      <CheckCircle className="h-3 w-3 text-white" />
-                    </div>
-                    <span className="text-white/80 group-hover:text-white transition-colors duration-300">
-                      {benefit}
-                    </span>
-                  </div>
-                ))}
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-0 px-8 py-6 text-lg font-semibold rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 group"
+                >
+                  Habla con nosotros
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                </Button>
+                <Button variant="outline" size="lg" className="border-white/20 text-white">
+                  Explorar casos de uso
+                </Button>
               </div>
-
-              <p className="text-lg text-white/70 mb-8 leading-relaxed">
-                Contáctanos para una demostración personalizada y descubre cómo los Agentes de IA pueden ayudar a tu negocio.
-              </p>
-
-              {/* CTA Button */}
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-0 px-8 py-6 text-lg font-semibold rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 group"
-              >
-                Request Demo
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-              </Button>
             </div>
           </div>
         </div>

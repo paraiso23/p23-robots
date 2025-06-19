@@ -18,10 +18,12 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "Features", href: "#features" },
-    { name: "Use Cases", href: "#use-cases" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Contact", href: "#contact" }
+    { name: 'Sistema modular', href: '#modular' },
+    { name: 'Cómo funciona', href: '#como' },
+    { name: 'Librería', href: '#library' },
+    { name: 'Casos reales', href: '#cases' },
+    { name: 'Planes', href: '#pricing' },
+    { name: 'Contacto', href: '#contact' }
   ];
 
   return (

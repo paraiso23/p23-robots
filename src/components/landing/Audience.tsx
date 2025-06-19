@@ -1,71 +1,52 @@
 
-import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Users, Shield, Bot } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
-const audiences = [
-  {
-    icon: Users,
-    title: "Agentes de IA para Usuarios",
-    description: "Te ayudan a crear contenido, responder mensajes rápido y mejorar tus textos para marketing y atención al cliente."
-  },
-  {
-    icon: Shield,
-    title: "Agentes de IA para Directivos",
-    description: "Revisan tus números, vigilan las métricas importantes y te sugieren qué hacer para mejorar tu negocio."
-  },
-  {
-    icon: Bot,
-    title: "Agentes de IA para Consumidores",
-    description: "Chatbots que hablan con tus clientes de forma natural y resuelven sus dudas las 24 horas, todos los días."
-  }
+const tasks = [
+  'Seguimiento de leads olvidados',
+  'Redacción de propuestas',
+  'Recordatorios automáticos',
+  'Ideas y programación de redes',
+  'Gestión de documentos',
+  'Facturación y cobros',
+  'Resumen de reuniones'
 ];
 
 const Audience = () => {
   return (
-    <section id="features" className="section-padding relative">
+    <section id="modular" className="section-padding relative">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-20">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
-            <span className="text-gradient">Los Agentes de IA trabajan</span>
+            <span className="text-gradient">¿Qué es un sistema</span>
             <br />
-            <span className="text-gradient-blue">para toda tu empresa</span>
+            <span className="text-gradient-blue">modular de asistentes IA?</span>
           </h2>
+          <p className="text-xl text-white/70 leading-relaxed mb-4">
+            Creamos agentes que automatizan partes específicas de tu negocio
+            (responder correos, seguir propuestas, generar contenido…)
+          </p>
           <p className="text-xl text-white/70 leading-relaxed">
-            En Paraiso23 creamos una solución de IA práctica donde los agentes se encargan de las tareas del día a día mientras tú te dedicas a hacer crecer tu negocio.
+            Los puedes usar por separado o conectarlos entre sí como piezas de
+            LEGO. Empiezas con uno. Si lo necesitas, añades más. Sin
+            instalaciones ni líos técnicos.
           </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {audiences.map((item, index) => (
-            <Card 
-              key={index} 
-              className="glass hover-lift group cursor-pointer border-0 relative overflow-hidden"
-            >
-              {/* Gradient Border Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
-              
-              <CardHeader className="relative z-10 p-8">
-                {/* Icon */}
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <item.icon className="h-8 w-8 text-blue-400" />
-                  </div>
-                  <div className="absolute inset-0 bg-blue-400 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300" />
-                </div>
-
-                {/* Content */}
-                <CardTitle className="text-2xl font-bold text-white mb-4 group-hover:text-gradient-blue transition-all duration-300">
-                  {item.title}
-                </CardTitle>
-                <CardDescription className="text-white/70 text-base leading-relaxed">
-                  {item.description}
-                </CardDescription>
-              </CardHeader>
-            </Card>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+          {tasks.map((task) => (
+            <div key={task} className="flex items-start gap-3">
+              <span className="mt-1">
+                <CheckCircle className="h-5 w-5 text-blue-400" />
+              </span>
+              <span className="text-white/80">{task}</span>
+            </div>
           ))}
         </div>
+
+        <p className="text-center text-white/70 text-lg mt-12">
+          “Cada agente tiene una misión. Juntos forman tu equipo invisible.”
+        </p>
       </div>
     </section>
   );
